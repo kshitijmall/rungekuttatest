@@ -22,8 +22,7 @@ def eom (t,x):
     B = 157
     rho0 = 1.225
     H = 7200
-    # Calculate the state derivative vector
-    xdot = [x[1]*np.sin(x[2]),\ # hdot
-           -rho0*np.exp(-x[0]/H)*x[1]**2/(2*B)-g*np.sin(x[2]),\ # vdot
-           (x[1]/(re+x[0]) - g/x[1])*np.cos(x[2])] # fpa dot
-    return xdot
+    xdot = [x[1]*np.sin(x[2]),\
+           -rho0*np.exp(-x[0]/H)*x[1]**2/(2*B)-g*np.sin(x[2]),\
+           (x[1]/(re+x[0]) - g/x[1])*np.cos(x[2])] 
+    return xdot # Calculate the state derivative vector
