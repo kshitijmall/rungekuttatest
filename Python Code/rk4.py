@@ -1,39 +1,41 @@
-def rk4 (a, b, N, alpha):
-#
+def rk4 (a, b, N, M, alpha):
+################################################################################
 ## RK4VEC takes one Runge-Kutta step for a vector ODE.
 #
-#  Discussion:
-#
-#  Licensing: This code is distributed under the GNU LGPL license.
 #
 #  Author: Kshitij Mall
 #
-#  Modified: 13 February 2019
+#  Modified: 18 February 2019
 #  Parameters:
 #
-#    Input, real a, the current time.
+#    Input: double a, the initial time.
 #
-#    Input, integer b, the spatial dimension.
+#           double b, the final time.
 #
-#    Input, real N, the solution estimate at the current time.
+#           integer N, the time step.
 #
-#    Input, real alpha, the time step.
+#           integer M, the number of states.
 #
-#    Output, real U(M), the fourth-order Runge-Kutta solution
-#    estimate at time T0+DT.
+#           double alpha, the initial state vector.
 #
+#    Output: double t, w: the fourth-order Runge-Kutta solution
+#
+################################################################################
+# Import the necessary packages
     import numpy as np
     import eom
     h = float((b-a))/N # The step size
-    t = np.zeros ( N )
+    t = np.zeros ( N ) # Initialize the time vector with zero values
     t[0] = a # Initial time
-    w = np.zeros ( (3, N) )
-    w[:,0] = alpha # Initial value
+    w = np.zeros ( (M, N) ) # Initialize the state matrix with zero values
+    w[:,0] = alpha # Insert initial value input as the first row of the state
     for i in range(N-1):
-        k1 = h*np.ones (3)*eom.eom(t[i], w[:,i])
-        k2 = h*np.ones (3)*eom.eom(t[i]+h/2, w[:,i]+0.5*k1)
-        k3 = h*np.ones (3)*eom.eom(t[i]+h/2, w[:,i]+0.5*k2)
-        k4 = h*np.ones (3)*eom.eom(t[i]+h, w[:,i]+k3)
+        # Calculate k1, k2, k3, and k4 for each time inputs
+        k1 = h*np.ones (M)*eom.eom(t[i], w[:,i])
+        k2 = h*np.ones (M)*eom.eom(t[i]+h/2, w[:,i]+0.5*k1)
+        k3 = h*np.ones (M)*eom.eom(t[i]+h/2, w[:,i]+0.5*k2)
+        k4 = h*np.ones (M)*eom.eom(t[i]+h, w[:,i]+k3)
+        # Update the state matrix with k1, k2, k3, k4, and old state value
         w[:,i+1] = w[:,i] + (k1 + 2.0*k2 + 2.0*k3 + k4)/6.0
-        t[i+1] = t[i] + h
-    return t, w
+        t[i+1] = t[i] + h # Update the time values
+    return t, w # Return the time and state vectors
