@@ -37,7 +37,7 @@ int main (int argc, const char * argv[]) {
 //
 //  Modified:
 //
-//    16 February 2019
+//    17 February 2019
 //
 //  Author:
 //
@@ -62,7 +62,7 @@ double ** result = rk4(t0, tf, N, init);
 
 // Get ending timepoint
 t = clock() - t;
-	cout << "time: " << t*1.0/CLOCKS_PER_SEC << " seconds" << endl;
+	cout << "Computation Time: " << t*1.0/CLOCKS_PER_SEC << " seconds" << endl;
 
 //printResult(result);
 return 0;
