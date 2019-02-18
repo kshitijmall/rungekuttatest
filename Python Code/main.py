@@ -1,45 +1,47 @@
 import sys
 import time
 def input():
-#
-## main
-#
-#  Discussion:
-#
-#  Licensing: This code is distributed under the GNU LGPL license.
+################################################################################
+# main
 #
 #  Author: Kshitij Mall
 #
-#  Modified: 13 February 2019
+#  Modified: 18 February 2019
 #  Parameters:
 #
 #    Input: None
 #
-#    Output, real U(M), the fourth-order Runge-Kutta solution
-#    estimate at time T0+DT.
+#    Output: real [t,y], the fourth-order Runge-Kutta solution
 #
+################################################################################
+
+# Import the necessary packages
     import numpy as np
     import platform
     import rk4
 
     print ( '' )
-    print ( '' )
     print ( '  Python version: %s' % ( platform.python_version ( ) ) )
     print ( '  Test the RK4 Function.' )
 
+    # Write the necessary inputs
     vatm = 11060 # Entry Velocity, m/s
     hatm = 80000 # Entry Height, m
     gamma0 = -50/180*np.pi # Initial flight path angle, rad
+    t0 = 0 # Initial time
+    tf = 212.2 # Final time
+    step = 1000 # Time steps
+    S = 3 # Number of states
+    init = [hatm,vatm,gamma0] # Initial state vector
 
-    t0 = 0 # initial time
-    tf = 206 # final time
-    step = 2000 # time steps
-    init = [hatm,vatm,gamma0]
     try:
-        tic = time.time()
-        [t,y] = rk4.rk4(t0, tf, step, init)
-        elapsed = time.time() - tic
+        tic = time.time() # Start the timer
+        # Obtain the states for the given times using rk4
+        [t,y] = rk4.rk4(t0, tf, step, S, init)
+        elapsed = time.time() - tic # Calculate the elapsed time
+        # Print the computation time
         print('Time taken by pure python code:',elapsed)
+        # Obtain the energy plot
         import matplotlib
         import matplotlib.pyplot as plt
         matplotlib.use("TkAgg")
@@ -48,9 +50,8 @@ def input():
         plt.xlabel('Velocity [km/s]')
         plt.ylabel('Position [km]')
         plt.show()
-    except IOError as err:
-        print("I/O error: {0}".format(err))
     except:
+        # In case of an unexpected error catch and raise an exception
         print("Unexpected error:", sys.exc_info()[0])
     raise
 
