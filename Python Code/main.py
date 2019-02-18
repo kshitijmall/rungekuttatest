@@ -32,7 +32,7 @@ def input():
     gamma0 = -50/180*np.pi # Initial flight path angle, rad
 
     t0 = 0 # initial time
-    tf = 500 # final time
+    tf = 206 # final time
     step = 2000 # time steps
     init = [hatm,vatm,gamma0]
     try:
