@@ -1,7 +1,6 @@
 def rk4 (a, b, N, M, alpha):
 ################################################################################
-## RK4VEC takes one Runge-Kutta step for a vector ODE.
-#
+## RK4 calculates the state values for each time step
 #
 #  Author: Kshitij Mall
 #
