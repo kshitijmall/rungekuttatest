@@ -5,13 +5,12 @@ Runge Kutta Based IVP Problem Solver
 :Author: Kshitij Mall
 :Contact: mall@purdue.edu
 :URL: https://github.com/kshitijmall/rungekuttatest
-:Documentation: http://numexpr.readthedocs.io/en/latest/
 :Atom: |atom|
 :Python: |version|
 
-.. |atom| image:: https://princetonlibrary.org/software/atom-icon/
+.. |atom| image:: https://img.shields.io/badge/ATOM-1.34-brightgreen.svg
         :target: https://atom.io/
-.. |version| image:: https://www.python.org/static/community_logos/python-logo-master-v3-TM.png
+.. |version| image:: https://img.shields.io/badge/Python-3.7-blue.svg
         :target: https://www.python.org/downloads/release/python-370/
 
 
@@ -24,7 +23,7 @@ cython, third includes a pure C++ approach.
 
 
 Approach
--------------------------------------
+--------
 
 The main python file is named as main. This main file calls the rk4 function
 file, which in turn calls the eom files to compute the values of k1, k2, k3 and
@@ -52,14 +51,6 @@ The energy plot would be displayed for the python code along with the
 computation time. After the user closes the figure window of the energy plot,
 the C++ code would then execute and display the computation time for this
 hypersonics problem.
-
-
-Built With
-----------
-
-[Atom](https://atom.io/) - Text and source code editor
-[Python](https://www.python.org/) Programming tool
-
 
 Aknowledgements
 ---------------
