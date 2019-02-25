@@ -38,6 +38,7 @@ def input():
         elapsed = time.time() - tic # Calculate the elapsed time
         # Print the computation time
         print('  Time taken by python with cython code:',elapsed)
+        print ( '' )
     except:
         # In case of an unexpected error catch and raise an exception
         print("  Unexpected error:", sys.exc_info()[0])
