@@ -48,7 +48,8 @@ int main (int argc, const char * argv[]) {
 //
 //******************************************************************************
 cout << "\n" << "  C++ version\n";
-
+cout << "  Test the RK4 function with C++\n";
+	
 const double vatm = 11060.0; // Entry Velocity, m/s
 const double hatm = 80000.0; // Entry Height, m
 const double gamma0 = -50.0/180.0*M_PI; // Initial flight path angle, rad
