@@ -1,6 +1,6 @@
-============================================================
-Runge Kutta 4 Based Hypersonics Initial Value Problem Solver
-============================================================
+==============================================================
+Runge Kutta 4 Solution for a Hypersonics Initial Value Problem
+==============================================================
 
 :Author: Kshitij Mall
 :Contact: mall@purdue.edu
@@ -16,8 +16,8 @@ Runge Kutta 4 Based Hypersonics Initial Value Problem Solver
         :target: https://www.python.org/downloads/release/python-370/
 .. |version2| image:: https://img.shields.io/badge/Cython-0.29.5-green.svg
         :target: https://pypi.org/project/Cython/
-.. |docs| image:: https://readthedocs.org/projects/kshitijmall-demo/badge/?version=latest
-        :target: https://kshitijmall-demo.readthedocs.io/en/latest/?badge=latest
+.. |docs| image:: https://readthedocs.org/projects/rk4test-docs/badge/?version=latest
+        :target: https://rk4test-docs.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
@@ -67,14 +67,14 @@ Observations
 ------------
 
 As expected, the Python code takes the most time to compute the results using the RK4
-function. Cython is around 30X faster than the python code. C++ is the fastest and is 
+function. Cython is around 30X faster than the Python code. C++ is the fastest and is 
 around 125X faster than Python and around 4X faster than Cython.
 
 
 Documentation
 -------------
 
-Please see the documentation at `numexpr.readthedocs.io <https://numexpr.readthedocs.io>`_.
+Please see the documentation at `rk4test-docs.readthedocs.io <https://rk4test-docs.readthedocs.io/en/latest/>`_.
 
 
 Aknowledgements
