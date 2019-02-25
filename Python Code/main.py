@@ -20,8 +20,7 @@ def input():
 ################################################################################
     print ( '' )
     print ( '  Python version: %s' % ( platform.python_version ( ) ) )
-    print ( '  Test the RK4 Function.' )
-    print ( '' )
+    print ( '  Test the RK4 Function with Python.' )
     # Write the necessary inputs
     vatm = 11060 # Entry Velocity, m/s
     hatm = 80000 # Entry Height, m
@@ -38,7 +37,7 @@ def input():
         [t,y] = rk4.rk4(t0, tf, step, S, init)
         elapsed = time.time() - tic # Calculate the elapsed time
         # Print the computation time
-        print('Time taken by pure python code:',elapsed)
+        print('  Time taken by pure python code:',elapsed)
     except:
         # In case of an unexpected error catch and raise an exception
         print("Unexpected error:", sys.exc_info()[0])
