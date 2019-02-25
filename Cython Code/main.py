@@ -39,10 +39,10 @@ def input():
         [tout,y] = rk4.rk4(t0, tf, step, S, init)
         elapsed = time.time() - tic # Calculate the elapsed time
         # Print the computation time
-        print('Time taken by python with cython code:',elapsed)
+        print('  Time taken by python with cython code:',elapsed)
     except:
         # In case of an unexpected error catch and raise an exception
-        print("Unexpected error:", sys.exc_info()[0])
+        print("  Unexpected error:", sys.exc_info()[0])
         raise
 
 """The following if condition allows this python module to be imported by other modules
