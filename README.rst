@@ -13,7 +13,7 @@ Runge Kutta 4 Solution for a Hypersonics Initial Value Problem
 .. |atom| image:: https://img.shields.io/badge/ATOM-1.34-brightgreen.svg
         :target: https://atom.io/
 .. |version1| image:: https://img.shields.io/badge/Python-3.6.8-blue.svg
-        :target: https://www.python.org/downloads/release/python-370/
+        :target: https://www.python.org/downloads/release/python-368/
 .. |version2| image:: https://img.shields.io/badge/Cython-0.29.5-green.svg
         :target: https://pypi.org/project/Cython/
 .. |docs| image:: https://readthedocs.org/projects/rk4test-docs/badge/?version=latest
