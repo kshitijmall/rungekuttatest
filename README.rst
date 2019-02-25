@@ -80,8 +80,7 @@ Please see the documentation at `rk4test-docs.readthedocs.io <https://rk4test-do
 Aknowledgements
 ---------------
 
-|`AAE 590 Hypersonics & Design <https://engineering.purdue.edu/~mjgrant/syllabus-2.pdf>`_ by Professor Michael Grant
-|Purdue Air Link
+`AAE 590 Hypersonics & Design <https://engineering.purdue.edu/~mjgrant/syllabus-2.pdf>`_ by Professor Michael Grant
 
 .. Local Variables:
 .. mode: text
