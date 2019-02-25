@@ -1,12 +1,16 @@
+# Import the necessary packages
 import sys
 import time
+from math import pi
+import platform
+import rk4
 def input():
 ################################################################################
 # main
 #
 #  Author: Kshitij Mall
 #
-#  Modified: 18 February 2019
+#  Modified: 24 February 2019
 #  Parameters:
 #
 #    Input: None
@@ -14,20 +18,14 @@ def input():
 #    Output: real [t,y], the fourth-order Runge-Kutta solution
 #
 ################################################################################
-
-# Import the necessary packages
-    import numpy as np
-    import platform
-    import rk4
-
     print ( '' )
     print ( '  Python version: %s' % ( platform.python_version ( ) ) )
     print ( '  Test the RK4 Function.' )
-
+    print ( '' )
     # Write the necessary inputs
     vatm = 11060 # Entry Velocity, m/s
     hatm = 80000 # Entry Height, m
-    gamma0 = -50/180*np.pi # Initial flight path angle, rad
+    gamma0 = -50/180*pi # Initial flight path angle, rad
     t0 = 0 # Initial time
     tf = 212.2 # Final time
     step = 1000 # Time steps
@@ -41,19 +39,10 @@ def input():
         elapsed = time.time() - tic # Calculate the elapsed time
         # Print the computation time
         print('Time taken by pure python code:',elapsed)
-        # Obtain the energy plot
-        import matplotlib
-        import matplotlib.pyplot as plt
-        matplotlib.use("TkAgg")
-        plt.plot(y[1,:]/1000, y[0,:]/1000, linestyle='--', marker='o')
-        plt.title('Energy Plot')
-        plt.xlabel('Velocity [km/s]')
-        plt.ylabel('Position [km]')
-        plt.show()
     except:
         # In case of an unexpected error catch and raise an exception
         print("Unexpected error:", sys.exc_info()[0])
-    raise
+        raise
 
 """The following if condition allows this python module to be imported by other modules
 without calling main function. If desired, this main function can be called by
