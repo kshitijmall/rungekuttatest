@@ -70,7 +70,7 @@ double ** result = rk4(t0, tf, init);
 t = clock() - t;
 
 // Display the computation time
-cout << "  Computation Time: " << t*1.0/CLOCKS_PER_SEC << " seconds" << endl;
+cout << "  Time taken by C++ code: " << t*1.0/CLOCKS_PER_SEC << " seconds" << endl;
 
 //printResult(result); // Print the state vector
 return 0;
