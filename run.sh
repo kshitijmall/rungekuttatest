@@ -6,6 +6,10 @@
 cd Python\ Code/
 python ./main.py
 cd ..
+cd Cython\ Code/
+python setup.py build_ext --inplace
+python ./main.py
+cd ..
 cd C++\ Code/
 make main
 ./main
