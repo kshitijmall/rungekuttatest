@@ -27,7 +27,7 @@ int main (int argc, const char * argv[]) {
 //
 //  Modified:
 //
-//    18 February 2019
+//    24 February 2019
 //
 //  Purpose:
 //
@@ -47,7 +47,7 @@ int main (int argc, const char * argv[]) {
 //    This code is distributed under the GNU LGPL license
 //
 //******************************************************************************
-cout << "\n" << "C++ version\n";
+cout << "\n" << "  C++ version\n";
 
 const double vatm = 11060.0; // Entry Velocity, m/s
 const double hatm = 80000.0; // Entry Height, m
@@ -69,7 +69,7 @@ double ** result = rk4(t0, tf, init);
 t = clock() - t;
 
 // Display the computation time
-cout << "Computation Time: " << t*1.0/CLOCKS_PER_SEC << " seconds" << endl;
+cout << "  Computation Time: " << t*1.0/CLOCKS_PER_SEC << " seconds" << endl;
 
 //printResult(result); // Print the state vector
 return 0;
@@ -232,4 +232,3 @@ void printResult(double ** state){
     cout << endl;
   }
 }
-
