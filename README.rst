@@ -1,17 +1,24 @@
-====================================
-Runge Kutta Based IVP Problem Solver
-====================================
+================================================
+Runge Kutta Based Hypersonics IVP Problem Solver
+================================================
 
 :Author: Kshitij Mall
 :Contact: mall@purdue.edu
 :URL: https://github.com/kshitijmall/rungekuttatest
 :Atom: |atom|
-:Python: |version|
+:Python: |version1|
+:Cython: |version2|
+:readthedocs: |docs|
 
 .. |atom| image:: https://img.shields.io/badge/ATOM-1.34-brightgreen.svg
         :target: https://atom.io/
-.. |version| image:: https://img.shields.io/badge/Python-3.7-blue.svg
+.. |version1| image:: https://img.shields.io/badge/Python-3.6.8-blue.svg
         :target: https://www.python.org/downloads/release/python-370/
+.. |version2| image:: https://img.shields.io/badge/Cython-0.29.5-green.svg
+        :target: https://pypi.org/project/Cython/
+.. |docs| image:: https://readthedocs.org/projects/kshitijmall-demo/badge/?version=latest
+        :target: https://kshitijmall-demo.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
 
 
 Description
@@ -49,22 +56,31 @@ Usage
 To run the code from the terminal, the user can just clone/download the files
 and then use the terminal to run the shell script named run. To run such a
 shell script, the user need to just type:
-sh run.sh
+::
+  $sh run.sh
 
 The run shell script would run the python code first, cython code next and finally 
-the C++ code. The computation times for the given hypersonic IVP are shown for these 
-three approaches. 
+the C++ code. The computation times for these three approaches are displayed. 
+
 
 Observations
 ------------
 
 As expected, the Python code takes the most time to compute the results using the RK4
-function. Cython is around 30X faster than the python code. C++ is the fastest of the
-three and is around 125X faster than Python and around 4X faster than Cython.
+function. Cython is around 30X faster than the python code. C++ is the fastest and is 
+around 125X faster than Python and around 4X faster than Cython.
+
+
+Documentation
+-------------
+
+Please see the documentation at `numexpr.readthedocs.io <https://numexpr.readthedocs.io>`_.
+
 
 Aknowledgements
 ---------------
 
+`AAE 590 Hypersonics & Design <http://www.opensource.org/licenses/mit-license.php>`_ by Professor Michael Grant
 Purdue Air Link
 
 .. Local Variables:
