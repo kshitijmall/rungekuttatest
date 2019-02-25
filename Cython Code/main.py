@@ -20,9 +20,7 @@ def input():
 ################################################################################
 
     print ( '' )
-    print ( '  Python version: %s' % ( platform.python_version ( ) ) )
     print ( '  Test the RK4 Function with Cython.' )
-    print ( '' )
     # Write the necessary inputs
     vatm = 11060 # Entry Velocity, m/s
     hatm = 80000 # Entry Height, m
