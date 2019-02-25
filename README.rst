@@ -59,8 +59,8 @@ Observations
 ------------
 
 As expected, the Python code takes the most time to compute the results using the RK4
-function. Cython is around 10X faster than the python code. C++ is the fastest of the
-three and is around 100X faster than Python and around 10X faster than Cython.
+function. Cython is around 30X faster than the python code. C++ is the fastest of the
+three and is around 125X faster than Python and around 4X faster than Cython.
 
 Aknowledgements
 ---------------
