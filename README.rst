@@ -1,6 +1,6 @@
-================================================
-Runge Kutta Based Hypersonics IVP Problem Solver
-================================================
+============================================================
+Runge Kutta 4 Based Hypersonics Initial Value Problem Solver
+============================================================
 
 :Author: Kshitij Mall
 :Contact: mall@purdue.edu
@@ -24,9 +24,9 @@ Runge Kutta Based Hypersonics IVP Problem Solver
 Description
 ----------------
 
-This mini project includes three ways of solving an IVP using 4th order Runge
-Kutta method. First approach uses a pure python file, second uses python and
-cython, third includes a pure C++ approach.
+This mini project includes three ways of solving an initial value problem (IVP)
+using 4th order Runge Kutta method. First approach uses a pure python file, second
+uses python and cython, third includes a pure C++ approach.
 
 
 Approach
@@ -80,7 +80,7 @@ Please see the documentation at `numexpr.readthedocs.io <https://numexpr.readthe
 Aknowledgements
 ---------------
 
-`AAE 590 Hypersonics & Design <http://www.opensource.org/licenses/mit-license.php>`_ by Professor Michael Grant
+`AAE 590 Hypersonics & Design <https://engineering.purdue.edu/~mjgrant/syllabus-2.pdf>`_ by Professor Michael Grant
 Purdue Air Link
 
 .. Local Variables:
