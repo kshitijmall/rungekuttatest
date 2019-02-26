@@ -153,7 +153,7 @@ double ** rk4(double a, double b, double alpha[]){
 
   double h = double((b-a)/N); // The step size
 	// Initialize useful variables for the Runge Kutta formula
-  double * k1, * k2, * k3, * k4, t[N], k2inp[S], k3inp[S], k4inp[S];
+  double * k1, * k2, * k3, * k4, t[N+1], k2inp[S], k3inp[S], k4inp[S];
 
   for (int i = 0; i < N+1; ++i) {
        state[i] = new double[N]; // Insert columns of states for each time input
